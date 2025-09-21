@@ -20,17 +20,19 @@ const Footer = () => {
         <div className="bg-neutral-700 my-5 h-[1px] w-full" />
 
         <div className="flex md:flex-row flex-col md:items-center justify-between">
-          <p className="font-semi-bold text-gray text-xs">
+          <p className="font-semi-bold text-gray text-xs mb-2">
             Copyright © 2025 Apple Inc. All rights reserved.
           </p>
-          <div className="flex items-center gap-5">
+          <div
+            className={`grid grid-cols-2 lg:flex lg:flex-row items-center gap-2`}
+          >
             {footerLinks.map((link, i) => (
               <>
                 <p key={link} className="font-semibold text-gray text-xs">
                   {link}
                 </p>
                 {i < footerLinks.length - 1 && (
-                  <span className="text-gray text-xs">|</span>
+                  <span className="text-gray text-xs hidden lg:block">|</span>
                 )}
               </>
             ))}
